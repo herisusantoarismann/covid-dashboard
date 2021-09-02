@@ -1,0 +1,90 @@
+.leaflet-container {
+  height: 600px;
+}
+
+#components-layout-demo-custom-trigger .trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
+}
+
+#components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.site-layout .site-layout-background {
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.site-card-wrapper {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.site-card-wrapper > .ant-card {
+  border-radius: 10px;
+  text-align: center;
+}
+
+.leftContent {
+  flex: 2;
+}
+
+.rightContent {
+  flex: 1;
+  margin-left: 50px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.ant-space {
+  width: 100%;
+}
+
+.rightContent > .countryList {
+}
+
+.rightContent > .news {
+  height: 100%;
+}
+
+.rightContent > .ant-card > .ant-card-body > img {
+  height: 80px;
+  transform: translateY(-50px);
+}
+
+.highlightBox {
+  display: flex;
+}
+
+.ant-card-body > h1 {
+  font-weight: 600;
+}
+
+.ant-card-body > h2.ant-typography {
+  font-weight: 700;
+}
+
+.ant-list {
+  height: 250px;
+  overflow-y: auto;
+}
