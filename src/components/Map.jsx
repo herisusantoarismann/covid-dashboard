@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMapEvents,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import axios from "axios";
+import moment from "moment";
 
 export const Map = () => {
   const [data, setData] = useState();
@@ -25,7 +20,7 @@ export const Map = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {data != undefined
+      {data !== undefined
         ? data.map((item, idx) => {
             return (
               <Marker
@@ -33,12 +28,17 @@ export const Map = () => {
                 key={idx}
               >
                 <Popup>
-                  <img src={item.countryInfo.flag} alt="" height={10} />
+                  <img
+                    src={item.countryInfo.flag}
+                    alt=""
+                    height={10}
+                    style={{ marginRight: "5px" }}
+                  />
                   {item.country} <br />
-                  Confirm : {item.cases} <br />
-                  Deaths : {item.deaths} <br />
-                  Recovered : {item.recovered} <br />
-                  Last Update : {item.updated}
+                  Confirm : {item.cases.toLocaleString()} <br />
+                  Deaths : {item.deaths.toLocaleString()} <br />
+                  Recovered : {item.recovered.toLocaleString()} <br />
+                  Last Update : {moment(item.updated).format("l")}
                 </Popup>
               </Marker>
             );

@@ -1,10 +1,10 @@
 import React from "react";
 import "antd/dist/antd.css";
-import Home from "./components/Home";
-import { Map } from "./components/Map";
+import "./App.css";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
-  return <Home />;
+  return <Dashboard />;
 }
 
 export default App;
