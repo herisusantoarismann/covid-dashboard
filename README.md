@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository is an application for covid dashboard statistics from around the world
+
+## Screenshots
+![1](screenshot/1.png)
 
 ## Available Scripts
 
