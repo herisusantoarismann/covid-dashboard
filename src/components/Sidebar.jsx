@@ -1,9 +1,6 @@
 import React from "react";
 import { Layout, Menu } from "antd";
 import {
-  FlagOutlined,
-  FileOutlined,
-  BulbOutlined,
   GlobalOutlined,
 } from "@ant-design/icons";
 
@@ -21,21 +18,12 @@ const Sidebar = () => {
             cursor: "pointer",
           }}
         >
-          C9
+          CD
         </h1>
       </div>
       <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
         <Menu.Item key="1" icon={<GlobalOutlined />}>
           Global
-        </Menu.Item>
-        <Menu.Item key="2" icon={<FlagOutlined />}>
-          Country
-        </Menu.Item>
-        <Menu.Item key="3" icon={<FileOutlined />}>
-          News
-        </Menu.Item>
-        <Menu.Item key="4" icon={<BulbOutlined />}>
-          Tips
         </Menu.Item>
       </Menu>
     </Sider>
